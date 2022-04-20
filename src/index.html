@@ -1,0 +1,209 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema30</title>
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+
+    <!------------------------------------------------Nav Bar---------------------------------------------------------> 
+    <header class="bg-slate-900 sticky top-0 z-30">
+        <!--Div Wrapper-->
+        <div class="grid grid-12 align-middle mx-auto py-3      w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]     md:grid-cols-10">
+
+            <!--Sadwitch Button-->
+            <button class="p-1 focus:outline-none focus:bg-slate-800 focus:rounded-full    lg:hidden">
+                <svg class="text-white w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!--Logo & Browse movies link-->
+            <div class="col-start-5 col-end-7 flex items-center justify-self-center gap-8      md:col-span-4 md:justify-self-start ">
+                <h1 class=" text-violet-500 text-2xl font-black">Cinema<span class="text-slate-300">30</span></h1>
+                <a class=" hidden text-slate-300 hover:text-violet-500 transition duration-100     lg:block" href="">Browse Movies</a>
+            </div>
+            
+            <!--Search Bar-->
+            <div class="hidden md:col-start-9 md:col-end-13 lg:col-start-5 lg:col-end-11 justify-self-end first-letter:hidden md:block">
+                <div class="flex items-center justify-between bg-slate-800 py-1 pl-4 pr-1 rounded-full md:w-42 lg:w-72 border border-slate-700 hover:border-violet-500 hover:shadow-md hover:shadow-slate-700 transition duration-100">
+                    <input type="search" placeholder="Search movies" class="bg-slate-800 text-slate-400 p-0 border-none text-sm focus:ring-0 placeholder:text-slate-400 font-semibold">
+                    <div class="bg-violet-500 p-2 rounded-full hover:bg-violet-600">
+                        <svg class="text-white w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>                   
+                </div>
+            </div>
+
+            <!--Sign In & Sign in Button-->
+            <div class="hidden justify-self-end     md:col-start-11 md:col-end-13      lg:col-start-11 lg:col-end-13 lg:block lg:ml-4">
+                <div class=" flex justify-center items-center gap-4 border border-slate-700 py-2 px-4 rounded-full">
+                    <a class="text-slate-300 hover:text-violet-500 transition duration-100" href="">Sign in</a>
+                    <div class="h-6 border border-slate-700"></div>
+                    <a class="text-slate-300 hover:text-violet-500 transition duration-100" href="">Sign up</a>
+                </div>
+            </div>          
+
+            <!--Mobile search Icon-->
+            <div class="col-start-11 col-end-13 justify-self-end bg-violet-500 p-2 rounded-full w-8 h-8 hover:bg-violet-600      md:hidden">
+                <svg class="text-white w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>                     
+        </div>  
+    </header>
+
+    <!------------------------------------------------Hero Section---------------------------------------------------->
+    <section class="bg-slate-800 pt-12 pb-4">
+        <div class="bg-violet-600 rounded-2xl mx-auto     w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]">
+            <div class="flex flex-col items-center py-12 md:20 px-8">
+                <div class="md:flex md:items-center">
+                    <h2 class="text-white text-2xl font-bold text-center pb-4 pr-3     md:text-3xl      lg:text-5xl">Download movies: HD smallest size</h2>
+                    <span class="hidden     md:block md:w-10 md:h-10 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><style>.cls-3{fill:#f6fafd}.cls-4{fill:#273941}</style></defs><g id="_06-haha" data-name="06-haha"><circle cx="24" cy="24" r="23" style="fill:#ffce52"/><path d="M36.99 27.2c.63-.06 1.3-.13 2.01-.2a10.71 10.71 0 0 1-4.94 8.89 17.826 17.826 0 0 1-20.12 0A10.71 10.71 0 0 1 9 27c.59.13 1.27.25 2.02.35C11.35 31.06 17.03 34 24 34c7.07 0 12.8-3.02 12.99-6.8z" style="fill:#ae2d4c"/><path class="cls-3" d="M36.99 27.2C36.8 30.98 31.07 34 24 34c-6.97 0-12.65-2.94-12.98-6.65A113.09 113.09 0 0 0 24 28a119.54 119.54 0 0 0 12.99-.8z"/><path class="cls-4" d="M37 21h-2c0-1.569-1.142-5-2-5s-2 3.431-2 5h-2c0-.832.845-7 4-7s4 6.168 4 7zM19 21h-2c0-1.569-1.142-5-2-5s-2 3.431-2 5h-2c0-.832.845-7 4-7s4 6.168 4 7z"/><path d="M24 4c12.15 0 22 8.507 22 19h.975a23 23 0 0 0-45.95 0H2C2 12.507 11.85 4 24 4z" style="fill:#ffe369"/><path d="M46 23c0 10.493-9.85 19-22 19S2 33.493 2 23h-.975c-.014.332-.025.665-.025 1a23 23 0 0 0 46 0c0-.335-.011-.668-.025-1z" style="fill:#ffb32b"/><ellipse class="cls-3" cx="37" cy="9" rx=".825" ry="1.148" transform="rotate(-45.02 37 9)"/><ellipse class="cls-3" cx="30.746" cy="4.5" rx=".413" ry=".574" transform="rotate(-45.02 30.745 4.5)"/><ellipse class="cls-3" cx="34" cy="7" rx="1.65" ry="2.297" transform="rotate(-45.02 34 7)"/><path d="M36.3 29.266a4.247 4.247 0 0 0 .69-2.066A119.54 119.54 0 0 1 24 28a113.09 113.09 0 0 1-12.98-.65 4.377 4.377 0 0 0 .806 2.1A121.226 121.226 0 0 0 24 30a115.21 115.21 0 0 0 12.3-.734z" style="fill:#ededed"/><path d="M24 36c7.57 0 13.709-3.944 13.993-8.9l-1 .1C36.8 30.98 31.07 34 24 34c-6.969 0-12.648-2.939-12.98-6.648a39.11 39.11 0 0 1-1.02-.154C10.356 32.109 16.48 36 24 36z" style="fill:#8a293d"/></g></svg></span>
+                </div>
+                
+                <p class="text-white text-sm md:text-base text-center md:w-4/5 lg:w-4/6">Welcome to the official Cinema30 website. Here you can browse and download  movies in excellent 720p, 1080p, 2160p 4K and 3D quality, all at the smallest file size. Cinema30 Movies Torrents. </p>
+                <button class="py-3 px-8 bg-purple-500 rounded-full text-white font-semibold mt-8 lg:mt-12 focus:bg-violet-500 focus:ring-2 focus:ring-violet-400 shadow-lg shadow-violet-700 md:focus:none hover:bg-violet-500 hover:scale-105 transition duration-150 ">Browse Movies</button>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------Main Conntent---------------------------------------------------->
+    <main class="bg-slate-800 py-12">
+
+        <!-----Popular Downloads----->
+        <section>
+
+            <!--Wrapper-->
+            <div class="mx-auto     w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]">
+
+                <!--Section title & Button-->
+                <div class="flex justify-between items-center border-b border-slate-700 pb-4">
+                    <div class="flex items-center gap-2">
+                        <svg class="text-violet-500 w-6 h-6     md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <h3 class="text-slate-200 font-semibold md:text-2xl text-lg">Popular Downloads</h3>
+                    </div>
+                    <button class="text-slate-300 text-sm font-semibold bg-slate-700 px-5 py-2 rounded-full hover:bg-slate-600 transition duration-150">More...</button>
+                </div>
+
+                <!--Cards-->
+                <div class="grid grid-cols-2 gap-y-8 gap-x-5 mt-12      md:grid-cols-2 md:gap-x-12      lg:grid-cols-4">
+                    <!--Card 1-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-1.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Spider-Man: No Way Home</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2021</span> | <span class="pl-1">Action</span></p>                      
+                    </div>
+
+                    <!--Card 2-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-4.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Dog</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2022</span> | <span class="pl-1">Comedy</span></p>                      
+                    </div>
+
+                    <!--Card 3-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-2.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">The Adam Project</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2021</span> | <span class="pl-1">Action</span>, <span>Adventure</span></p>                      
+                    </div>
+
+                    <!--Card 4-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-3.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Turning Red</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2022</span> | <span class="pl-1">Animation</span>, <span>Adventure</span>, <span>Comedy</span></p>                      
+                    </div>                    
+                </div>
+            </div>
+
+        </section>
+
+        <!--Latest Cinema30 Movie Torrents-->
+        <section class="mt-20     lg:mt-32">
+            <div class="mx-auto      w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]">
+                <div class="flex justify-between items-center border-b border-slate-700 pb-4">
+                    <div class="flex items-center gap-2">
+                        <svg class="text-violet-500 w-6 h-6     md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                        <h3 class="text-slate-200 font-semibold text-lg     md:text-2xl">Latest Movies</h3>
+                    </div>
+                    <button class="text-white text-sm font-semibold bg-violet-500 px-5 py-2 rounded-full hover:bg-violet-600 transition duration-150">Browse All</button>
+                </div>
+
+                 <!-----Cards----->
+                <div class="grid grid-cols-2 gap-y-8 gap-x-5 mt-12      md:grid-cols-2 md:gap-x-12 md:gap-y-14      lg:grid-cols-4">
+
+                    <!--Card 1-->
+                    <div class="relative hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-5.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Rugrats in Paris: The Movie</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2000</span> | <span class="pl-1">Animation</span>, <span>Family</span></p> 
+                        <span class="absolute top-3 py-1 pl-3 pr-4 bg-yellow-500 text-slate-800 font-bold rounded-tl rounded-bl rounded-full shadow-lg shadow-slate-500">1080px</span>                     
+                    </div>
+
+                    <!--Card 2-->
+                    <div class="relative hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-6.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Aline</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2020</span> | <span class="pl-1">Biography</span>, <span>Drama</span></p> 
+                        <span class="absolute top-3 py-1 pl-3 pr-4 bg-sky-500 text-slate-800 font-bold rounded-tl rounded-bl rounded-full shadow-md shadow-slate-700">720px</span>                     
+                    </div>
+
+                    <!--Card 3-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-7.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Around the World in 80 Days</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2004</span> | <span class="pl-1">Adventure</span>, <span>Family</span></p>                      
+                    </div>
+
+                    <!--Card 4-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-8.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Behind Enemy Lines</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">1997</span> | <span class="pl-1">Action</span>, <span>Thriller</span></p>                      
+                    </div>    
+                    
+                    <!--Card 5-->
+                    <div class="relative hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-5.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Rugrats in Paris: The Movie</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2000</span> | <span class="pl-1">Animation</span>, <span>Family</span></p> 
+                        <span class="absolute top-3 py-1 pl-3 pr-4 bg-yellow-500 text-slate-800 font-bold rounded-tl rounded-bl rounded-full shadow-lg shadow-slate-500">1080px</span>                     
+                    </div>
+
+                    <!--Card 6-->
+                    <div class="relative hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-6.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Aline</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2020</span> | <span class="pl-1">Biography</span>, <span>Drama</span></p> 
+                        <span class="absolute top-3 py-1 pl-3 pr-4 bg-sky-500 text-slate-800 font-bold rounded-tl rounded-bl rounded-full shadow-md shadow-slate-700">720px</span>                     
+                    </div>
+
+                    <!--Card 7-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-7.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Around the World in 80 Days</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">2004</span> | <span class="pl-1">Adventure</span>, <span>Family</span></p>                      
+                    </div>
+
+                    <!--Card 8-->
+                    <div class="hover:scale-105 transition duration-150">
+                        <a href="#"><img class="w-full rounded-xl border-2 border-slate-400 hover:shadow-xl hover:shadow-slate-900 hover:border-slate-200" src="/src/img/image-8.jpg" alt=""></a>
+                        <h1 class="font-bold leading-tight text-slate-300 pt-3">Behind Enemy Lines</h1>
+                        <p class="text-xs md:text-sm text-slate-500 pt-2"><span class="font-bold pr-1">1997</span> | <span class="pl-1">Action</span>, <span>Thriller</span></p>                      
+                    </div>             
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--------------------------------------------------Footer------------------------------------------------------->
+    <footer class="bg-slate-900">
+        <div class="flex flex-col justify-center items-center py-8 w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)] mx-auto">
+            <p class="text-slate-400">cinema30© 2011 - 2022</p>
+            <p class="text-slate-400 text-xs text-center pt-4">By using this site you agree to and accept our <span class="text-sky-400 underline">User Agreement</span>, which can be <span class="text-sky-400 underline">read here</span>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

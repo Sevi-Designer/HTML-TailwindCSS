@@ -1,0 +1,299 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turning Red</title>
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body> 
+    <!------------------------------------------------Nav Bar--------------------------------------------------------->
+     
+    <header class="bg-slate-900 sticky top-0 z-30">
+        <!--Div Wrapper-->
+        <div class="grid grid-12 align-middle mx-auto py-3      w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]     md:grid-cols-10">
+
+            <!--Sadwitch Button-->
+            <button class="p-1 focus:outline-none focus:bg-slate-800 focus:rounded-full    lg:hidden">
+                <svg class="text-white w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!--Logo & Browse movies link-->
+            <div class="col-start-5 col-end-7 flex items-center justify-self-center gap-8      md:col-span-4 md:justify-self-start ">
+                <h1 class=" text-violet-500 text-2xl font-black">Cinema<span class="text-slate-300">30</span></h1>
+                <a class=" hidden text-slate-300 hover:text-violet-500 transition duration-100     lg:block" href="">Browse Movies</a>
+            </div>
+            
+            <!--Search Bar-->
+            <div class="hidden md:col-start-9 md:col-end-13 lg:col-start-5 lg:col-end-11 justify-self-end first-letter:hidden md:block">
+                <div class="flex items-center justify-between bg-slate-800 py-1 pl-4 pr-1 rounded-full md:w-42 lg:w-72 border border-slate-700 hover:border-violet-500 hover:shadow-md hover:shadow-slate-700 transition duration-100">
+                    <input type="search" placeholder="Search movies" class="bg-slate-800 text-slate-400 p-0 border-none text-sm focus:ring-0 placeholder:text-slate-400 font-semibold">
+                    <div class="bg-violet-500 p-2 rounded-full hover:bg-violet-600">
+                        <svg class="text-white w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>                   
+                </div>
+            </div>
+
+            <!--Sign In & Sign in Button-->
+            <div class="hidden justify-self-end     md:col-start-11 md:col-end-13      lg:col-start-11 lg:col-end-13 lg:block lg:ml-4">
+                <div class=" flex justify-center items-center gap-4 border border-slate-700 py-2 px-4 rounded-full">
+                    <a class="text-slate-300 hover:text-violet-500 transition duration-100" href="">Sign in</a>
+                    <div class="h-6 border border-slate-700"></div>
+                    <a class="text-slate-300 hover:text-violet-500 transition duration-100" href="">Sign up</a>
+                </div>
+            </div>          
+
+            <!--Mobile search Icon-->
+            <div class="col-start-11 col-end-13 justify-self-end bg-violet-500 p-2 rounded-full w-8 h-8 hover:bg-violet-600      md:hidden">
+                <svg class="text-white w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>                     
+        </div>  
+    </header>
+    
+    <!-----------------------------------------------Movie Preview---------------------------------------------------->
+
+    <header class="bg-slate-800 py-8 md:py-12 relative">
+
+        <!--Top movie badge-->
+        <img src="/src/img/icon.png" alt="" class="absolute top-0  right-8 w-20      md:right-16 md:w-28      lg:right-32 lg:w-28"> 
+        
+        <!--Main wrapper-->
+        <div class="flex col     w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)] mx-auto     md:flex-row">
+
+            <div class="flex flex-col gap-3 justify-center items-center    md:flex-row md:items-start md:flex-start md:gap-8     lg:gap-20">
+                <!--Left side - Movie Cover-->
+                <img class="rounded-xl border-2 border-slate-400  md:h-80 lg:h-128" src="/src/img/image-3.jpg" alt="">
+            
+                <!--Right Side-->
+                <div class="md:w-8/12">
+                    <!--Main Info-->
+                    <div class="w-full flex flex-col justify-center     md:justify-start ">
+                         <!--Title and Stars-->
+                        <div class="flex flex-col justify-center items-center gap-3      md:justify-start md:items-start           lg:justify-start lg:items-start lg:gap-6">
+                            <h2 class="text-slate-300 text-3xl font-bold      lg:text-5xl">Turning Red</h2>
+                            <!--Stars-->
+                            <div class="flex items-center">
+                                <p for="5-stars" class="text-slate-300 text-lg font-semibold pr-3">5 Stars</p>
+                                <div class="flex items-center">
+                                    <svg class="text-amber-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-amber-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-amber-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-amber-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-amber-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Genre-->
+                        <p class="text-slate-300 font-semibold pt-2 pb-2 text-center    md:text-left md:text-lg md:pt-8">Adventure / Animation / Comedy</p>
+                        <!--Year-->
+                        <p class="text-slate-400 font-semibold  text-center    md:text-left ">2020</p>
+                    </div>
+
+                    <!--Secondary info-->
+                    <div>
+                        <!--Available quality-->
+                        <div class="flex flex-row justify-center items-center pt-3 gap-3    md:justify-start md:pt-8">
+                            <p class="text-slate-300 font-semibold md:text-lg">Available in:</p>
+                            <p class="py-1 px-4 bg-slate-700 border border-slate-600 rounded-full text-slate-400 font-semibold">1080p.WEB</p>
+                        </div>
+
+                        <!--Buttons-->
+                        <div class="flex flex-col md:flex-row gap-3 mt-7     md:mt-12 md:gap-4">
+                            <button class="w-full  bg-violet-500 text-lg text-white font-semibold rounded-full  py-3 px-20 hover:bg-violet-600 hover:shadow-lg hover:shadow-slate-900 transition duration-150s   md:px-12 md:w-auto    lg:px-20 ">Download</button>
+                            <button class="w-full bg-sky-400 text-lg text-white font-semibold rounded-full py-3 px-20 hover:bg-sky-500 hover:shadow-xl hover:shadow-slate-900 transition duration-150s      md:px-12 md:w-auto    lg:px-20 ">Watch Now</button>
+                        </div>
+                        <!--Synopsis-->
+                        <div class="py-10   lg:w-8/12">
+                            <h4 class="text-slate-300 text-xl font-semibold pb-4">Synopsis</h4>
+                            <p class="text-slate-400 leading-relaxed">Mei Lee (voice of Rosalie Chiang) is a confident, dorky 13-year-old torn between staying her mother's dutiful daughter and the chaos of adolescence. Her protective, if not slightly overbearing mother, Ming (voice of Sandra Oh), is never far from her daughter - an unfortunate reality for the teenager. And as if changes to her interests, relationships and body weren't enough, whenever she gets too excited (which is practically ALWAYS), she "poofs" into a giant red panda. —Disney/Pixar </p>
+                        </div>
+
+                        <!--Director-->
+                        <div class="flex items-center">
+                            <img src="/src/img/Domee-Shi.jpg" alt="" class="w-14 rounded-full border-2 border-sky-400">
+                            <div class="pl-3">
+                                <h4 class="text-slate-300 text-lg font-semibold">Domee Shi</h4>
+                                <h4 class="text-slate-500 text-small">Director</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+        </div>
+
+        <!---------------------------------Trailer & Screenshots--------------------------------------------->
+        <section>
+            
+            <!--Images-->
+            <div class="flex flex-col items-center gap-3 mx-auto border-t border-slate-600 pt-10 mt-10     w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]      lg:flex-row lg:pt-20 lg:mt-20">
+                <!--Trailer thumbnail-->
+                <div class="relative"> 
+                    <!--Video Icon-->
+                    <div class="flex flex-col justify-center items-center w-full h-full absolute shadow-lg bg-slate-900 bg-opacity-30 py-1 px-3">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                        <p class="text-white text-2xl font-semibold ">Trailer</p>
+                    </div>
+                    <!--Image--> 
+                    <img src="/src/img/large-screenshot1.jpg" alt="" class="w-full">
+                    <div class="bg-black absolute bg-opacity-0 top-0 left-0 w-full h-full hover:bg-opacity-40 transition duration-150"></div>
+                </div>
+                <!--Screenshot images-->
+                <div class="flex flex-col items-center gap-3     md:flex-row">
+                    <img src="/src/img/large-screenshot3.jpg" alt="" class="w-full">
+                    <img src="/src/img/large-screenshot2.jpg" alt="" class="w-full">
+                </div>
+            </div>
+
+            <!-----------------------------------Comments & Reviews------------------------------------------------>
+            <!--Wrapper-->
+            <div class="flex flex-col gap-16 mx-auto pt-10     w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)]        md:pt-20 md:gap-20     lg:grid lg:grid-cols-2 lg:gap-28">
+                <!--Coments Section-->
+                <div class="lg:col-span-1">
+                    <!--Title-->
+                    <div class="flex items-center gap-3">
+                        <svg class="w-7 h-7 text-violet-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>  
+                        <h4 class="text-slate-300 text-2xl font-bold" >Comments</h4>
+                    </div>
+                    <!--Comments-->
+                    <div class="flex flex-col h-140 overflow-y-auto bg-slate-900 rounded-2xl px-5 py-10 mt-6      md:px-8 md:mt-12">
+                        <!--1st comment-->
+                        <div class="flex items-start gap-5 border-b border-slate-800 pb-6">
+                            <img src="/src/img/Asset 4-8.png" alt="" class="w-12 rounded-full border-2 border-sky-400">
+                            <div>                                
+                                <p class="text-slate-500 text-md font-bold">catwalk <span class="font-normal">March 22,2022</span></p>
+                                <p class="text-slate-300">What a waist of time watched 15min and it drove me crazy i could not watch any more, the adds for it give it a different look like its funny etc but it was just a big smoke screen to get you in, don't bother downloading you will be very disappointed </p>
+                            </div>
+                        </div>
+
+                        <!--2nd comment-->
+                        <div class="flex items-start gap-5 border-b border-slate-800 py-6">
+                            <img src="/src/img/Asset 5-8.png" alt="" class="w-12 rounded-full border-2 border-sky-400">
+                            <div>                                
+                                <p class="text-slate-500 text-md font-bold">MovelIt <span class="font-normal">March 22,2022</span></p>
+                                <p class="text-slate-300">again a poor one from disney and pixar..  </p>
+                            </div>
+                        </div>
+
+                        <!--3rd comment-->
+                        <div class="flex items-start gap-5 border-b border-slate-800 py-6">
+                            <img src="/src/img/Asset 2-8.png" alt="" class="w-12 rounded-full border-2 border-sky-400">
+                            <div>                                
+                                <p class="text-slate-500 text-md font-bold">Iceman2005 <span class="font-normal">March 22,2022</span></p>
+                                <p class="text-slate-300">Oh my God !! The whole time I was rooting for that beast to come out and send that over caring, clingy mother and her brood of b/ches to kingdom come. </p>
+                            </div>
+                        </div>
+
+                        <!--4rd comment-->
+                        <div class="flex items-start gap-5 border-b border-slate-800 py-6">
+                            <img src="/src/img/Asset 1-8.png" alt="" class="w-12 rounded-full border-2 border-sky-400">
+                            <div>                                
+                                <p class="text-slate-500 text-md font-bold
+                                ">Iceman2005 <span class="font-normal">March 22,2022</span></p>
+                                <p class="text-slate-300">I loved this movie, i actually didn't expected anything but a lot of cringe, and that was what i got, but i a good the "the office" kind of cringe. The one that actually makes you laugh.</p>
+                            </div>
+                        </div>
+
+                        <!--5th comment-->
+                        <div class="flex items-start gap-5 border-b border-slate-800 py-6">
+                            <img src="/src/img/Asset 6-8.png" alt="" class="w-12 rounded-full border-2 border-sky-400">
+                            <div>                                
+                                <p class="text-slate-500 text-md font-bold">JustAFox <span class="font-normal">March 22,2022</span></p>
+                                <p class="text-slate-300">Okay, I walked into this with lowered expectations cause Disney is ultra woke, but it's totally not. It's great! It was fun, a nice story, has nice lessons about balancing being a rebellious teen with respecting and obeying your parentS, quite relatable for me, it's happening in an age before smartphones and social media, tons of character development, and it's mashing all of my furry buttons. 10/10 ps: to the race warrior people, Meilin is basically white for all intents and purposes and Priya's a good girl, just calm down </p>
+                            </div>
+                        </div>
+
+                        <!--5th comment-->
+                        <div class="flex items-start gap-5 border-b border-slate-800 py-6">
+                            <img src="/src/img/Asset 8-8.png" alt="" class="w-12 rounded-full border-2 border-sky-400">
+                            <div>                                
+                                <p class="text-slate-500 text-md font-bold">Beeg <span class="font-normal">March 22,2022</span></p>
+                                <p class="text-slate-300">Is it just me? Watching Red was like fingernails running down a chalkboard. Kids may like it, but it's targeted at teenagers who I doubt will.  </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Button-->
+                    <button class="bg-slate-700 text-slate-300 text-lg font-semibold py-4 w-full rounded-full mt-4 hover:bg-slate-600 transition duration-150">Login to leave a commnet</button>
+                </div>
+
+                <!--Reviews Section-->
+                <div class="col-span-1     lg:w-10/12">
+                    <!--Title-->
+                    <div class="flex items-center gap-3 ">
+                        <svg class="w-7 h-7 text-violet-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>  
+                        <h4 class="text-slate-300 text-2xl font-bold" >Movie Reviews</h4>
+                    </div>
+
+                    <!--1st review-->
+                    <div class="mt-6 border-b border-slate-700 pb-8     md:mt-12">
+                        <div class="flex items-center gap-3">
+                            <p class="text-slate-500 ">Reviewed by <span class="font-bold">boblipton</span></p>
+                            <div class="flex items-center gap-2 ">
+                                <svg class="w-6 h-6 text-violet-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <p class="text-slate-300 font-bold">4/5</p>
+                            </div>
+                        </div>
+                        <h6 class="text-slate-300 font-semibold pt-5">Pixar Doesn't Tire Of Making Wonderful Animated Features</h6>
+                        <p class=" leading-relaxed text-slate-400 pt-3">In the latest Pixar movie, Rosalie Chiang voice a 12-year-old girl in Toronto in 2002. She is the daughter of a tiger mother, has nervous breakdowns when she comes in second in spelling bees, and is securely under the thumb of her mother -- voiced by Sandra Oh -- although she adores a boy band, of which her mother severely disapproves. But being at that age, she finds a change in her body: under great emotional stress, she turns into a giant red panda. This turns out to be true of all the women in her family.</p>
+
+                        <button class="text-slate-500 font-bold pt-3 underline hover:text-slate-400 transition duration-150">Read more</button>
+                    </div>
+
+                    <!--2nd review-->
+                    <div class="mt-12 border-b border-slate-700 pb-8">
+                        <div class="flex items-center gap-3">
+                            <p class="text-slate-500 ">Reviewed by <span class="font-bold">paul_haakonsen </span></p>
+                            <div class="flex items-center gap-2 ">
+                                <svg class="w-6 h-6 text-violet-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <p class="text-slate-300 font-bold">5/5</p>
+                            </div>
+                        </div>
+                        <h6 class="text-slate-300 font-semibold pt-5">This was somewhat of an acquired taste...</h6>
+                        <p class=" leading-relaxed text-slate-400 pt-3">My son had me all worked up to watch this 2022 Disney and Pixar animated movie titled "Turning Red". Sure, I will admit that the trailer to it definitely seemed interesting. And when we finally had the opportunity to sit down and watch it, we did.
+                        <br>
+                        <br>
+                         Well, my son enjoyed it. I, however, not so much. Sure, "Turning Red" from writers Domee Shi, Julie Cho and Sarah Streicher was watchable, but it seemed that me, as a white adult </p>
+
+                        <button class="text-slate-500 font-bold pt-3 underline hover:text-slate-400 transition duration-150">Read more</button>
+                    </div>
+
+                    <!--3rd review-->
+                    <div class="mt-12 border-b border-slate-700 pb-8">
+                        <div class="flex items-center gap-3">
+                            <p class="text-slate-500 ">Reviewed by <span class="font-bold">SnoopyStyle </span></p>
+                            <div class="flex items-center gap-2 ">
+                                <svg class="w-6 h-6 text-violet-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <p class="text-slate-300 font-bold">3/5</p>
+                            </div>
+                        </div>
+                        <h6 class="text-slate-300 font-semibold pt-5">coming of age Pixar</h6>
+                        <p class=" leading-relaxed text-slate-400 pt-3">It's 2002 Toronto. Meilin is a 13 year-old Chinese-Canadian girl on the verge of adulthood. Her family cares for their temple honorable their ancestor who turned into a red panda to defend her family. One morning, she wakes up to find herself transformed into a red panda. This is a coming-of-age story from Pixar. It's fun. I love the characters. There is a realism in these characters. They feel very authentic. Aside from the supernatural, this is really a story of </p>
+
+                        <button class="text-slate-500 font-bold pt-3 underline hover:text-slate-400 transition duration-150">Read more</button>
+                    </div>
+
+                    <!--Button-->
+                    <button class="mt-6 text-slate-500 font-bold pt-3 underline hover:text-slate-400 transition duration-150 md:mt-8" >Read more IMDb reviews</button>
+                    
+                </div>                
+            </div>
+
+        </section>
+
+    </header>
+  
+    <!------------------------------------------------Footer--------------------------------------------------------->
+    
+    <footer class="bg-slate-900">   
+        <div class="flex flex-col justify-center items-center py-8 w-[calc(100%_-_30px)] sm:w-[calc(100%_-_80px)] lg:w-[calc(100%_-_150px)] mx-auto">
+            <p class="text-slate-400">cinema30© 2011 - 2022</p>
+            <p class="text-slate-400 text-xs text-center pt-4">By using this site you agree to and accept our <span class="text-sky-400 underline">User Agreement</span>, which can be <span class="text-sky-400 underline">read here</span>.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

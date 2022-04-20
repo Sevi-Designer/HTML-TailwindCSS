@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
+    <title>Upload Movie</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+
+    <!--------------------------------------------1st Upload Screen----------------------------------------------------->
+
+    <div class=" grid grid-col-1 bg-slate-800 h-screen    lg:grid-cols-5">
+
+        <!--Left side-->
+        <div class="flex flex-col justify-start px-5 py-3     bg-gradient-to-r from-violet-800 to-purple-500     lg:col-span-2 lg:py-6 lg:pl-20">
+            <h1 class="text-white text-center text-2xl font-black   lg:text-left lg:pb-44">Cinema<span class="text-violet-400">30</span></h1>
+            <div class="flex flex-col justify-start pt-10">
+                <p class="font-semibold text-white tracking-widest text-center   lg:text-left lg:text-xl lg:pb-4">STEP 1/3</p>
+                <h2 class=" text-4xl lg:text-5xl font-bold text-white text-center   lg:text-left">Movie Details</h2>
+            </div>
+        </div> 
+        
+        <!--Right Side-->              
+        <div class="h-full flex justify-start overflow-y-auto static   lg:col-span-3 lg:pt-0">
+
+            <div class="mx-4 w-full md:w-8/12 sm:mx-auto sm:w-full sm:max-w-2xl px-6 pt-12">
+                <!--Form-->
+                <form action="" class="space-y-8 pb-40">
+
+                    <!--Title-->
+                    <div class="flex flex-col justify-center w-full">
+                        <label for="title" class="text-slate-200 text-lg font-semibold pb-2">Movie Title</label>
+                        <input type="text" name="title" id="title" required class="mt-1 bg-slate-600 rounded-lg border-slate-500 focus:border-violet-500 text-white  focus:ring-violet-500 focus:bg-slate-700 hover:border-violet-500  hover:bg-slate-700 transition duration-150">
+                    </div>
+
+                    <!--Year Made & Quality-->
+                    <div class="flex flex-col item-center gap-3 w-full      md:flex-row md:justify-between">
+                        
+                        <!--Year Made-->
+                        <div class="flex flex-col w-full">
+                            <label for="year" class="text-slate-200 text-lg font-semibold pb-2">Year Made</label>
+                            <input type="text" name="year" id="year" class="mt-1 bg-slate-600 rounded-lg border-slate-500 focus:border-violet-500 text-white  focus:ring-violet-500 focus:bg-slate-700 hover:border-violet-500  hover:bg-slate-700 transition duration-150 ">
+                        </div>
+
+                        <!--Quality-->
+                        <div class="flex flex-col w-full">
+                            <label for="quality" class="text-slate-200 text-lg font-semibold pb-2">Quality</label>
+                            <select name="quality" id="quality" class="mt-1 bg-slate-600 rounded-lg border-slate-500 focus:border-violet-500 text-white focus:ring-violet-500 focus:bg-slate-700 hover:border-violet-500  hover:bg-slate-700 transition duration-150">
+                                <option name="quality" value="720p">720p</option>
+                                <option name="quality" value="1080p">1080p</option>
+                                <option name="quality" value="2160p">2160p</option>
+                                <option name="quality" value="3D">3D</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    
+                    <!--Genre-->
+                    <div>
+                        <label for="genre" class="text-slate-200 text-lg font-semibold pb-4">Genre <span class="text-slate-400 text-sm italic font-medium">(Choose max 3 genre)</span></label>
+                        <ul id="genre" class=" flex flex-col mt-3      md:flex-row md:justify-between">
+                            <!--col 1-->
+                            <div class="space-y-2">
+                                <li>
+                                    <input type="checkbox" name="action" id="action" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="action" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Action</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="adventure" id="adventure" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="adventure" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Adventure</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="animation" id="animation" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="animation" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Animation</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="biography" id="biography" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="biography" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Biography</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="crime" id="crime" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="crime" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Crime</label>
+                                </li>
+                            </div>
+
+                            <!--col 2-->
+                            <div class="space-y-2 pt-2">
+                                <li>
+                                    <input type="checkbox" name="comedy" id="comedy" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="comedy" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Comedy</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="drama" id="drama" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="drama" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Drama</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="fantasy" id="fantasy" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="fantasy" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Fantasy</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="historical" id="historical" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="historical" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Historical</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="horror" id="horror" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="horror" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Horror  </label>
+                                </li>
+                            </div>
+
+                            <!--col 3-->
+                            <div class="space-y-2 pt-2">
+                                <li>
+                                    <input type="checkbox" name="romance" id="romance" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="romance" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Romance</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="scince fiction" id="scince fiction" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="scince fiction" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Scince Fiction</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="thriller" id="thriller" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="thriller" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Thriller</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="western" id="western" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="western" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">Western</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="other" id="other" class="border border-slate-400 rounded bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                    <label for="other" class="text-slate-300 hover:text-violet-400 transition duration-150 pl-2">other  </label>
+                                </li>
+                            </div>                                       
+                        </ul>                                
+                    </div>
+                    
+                    <!--Director-->
+                    <div class="flex flex-col justify-center mx-auto">
+                        <label for="director" class="text-slate-200 text-lg font-semibold pb-2">Director</label>
+                        <input type="text" name="director" id="director" required class="mt-1 bg-slate-600 rounded-lg border-slate-500 focus:border-violet-500 text-white  focus:ring-violet-500 focus:bg-slate-700 hover:border-violet-500  hover:bg-slate-700 transition duration-150">
+                    </div>
+
+                    <!--Director Image-->
+                    <div class="flex flex-col justify-center mx-auto">
+                        <label for="director" class="text-slate-200 text-lg font-semibold pb-1">Upload director's image <span class="text-slate-400 text-sm italic font-medium">(Optional)</span> </label>
+                        <input type="file" name="upload" id="director" required class="mt-5 block w-full text-sm text-slate-400
+                        file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold
+                        file:bg-slate-600 file:text-slate-100 hover:file:bg-violet-500 transition duration-150 cursor-pointer">
+                    </div>
+
+                    <!--Description-->
+                    <div class="flex flex-col justify-center mx-auto">
+                        <label for="description" class="text-slate-200 text-lg font-semibold pb-2">Synopsis/Description</label>
+                        <textarea rows="7" type="textarea" name="description" id="description" required class="mt-1 bg-slate-600 rounded-lg border-slate-500 focus:border-violet-500 text-white  focus:ring-violet-500 focus:bg-slate-700 hover:border-violet-500  hover:bg-slate-700 transition duration-150"></textarea>
+                        <label for="description" class="text-sm text-slate-400 mt-1 italic"> max 500 characters</label>
+                    </div>
+
+                    <!--Rating-->            
+                    <div class="space-y-1">
+                        <label class="text-slate-200 text-lg font-semibold ">Rating</label>
+
+                            <!--5 Stars-->
+                            <div class="flex items-center pb-2 pt-2">
+                                <input type="radio" name="rating" id="5-stars" checked value="5-stars" class="  border border-slate-400 bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                <label for="5-stars" class="text-slate-300 text-lg font-semibold hover:text-violet-400 transition duration-150 pl-4 pr-2">5</label>
+                                <div class="flex items-center ">
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+
+                            <!--4 Stars-->
+                            <div class="flex items-center pb-2">
+                                <input type="radio" name="rating" id="4-stars" value="4-stars" class="border border-slate-400 bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                <label for="4-stars" class="text-slate-300 text-lg font-semibold hover:text-violet-400 transition duration-150 pl-4 pr-2">4</label>
+                                <div class="flex items-center ">
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+
+                            <!--3 Stars-->
+                            <div class="flex items-center pb-2">
+                                <input type="radio" name="rating" id="3-stars" value="3-stars" class="border border-slate-400 bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                <label for="3-stars" class="text-slate-300 text-lg font-semibold hover:text-violet-400 transition duration-150 pl-4 pr-2">3</label>
+                                <div class="flex items-center ">
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+
+                            <!--2 Stars-->
+                            <div class="flex items-center pb-2">
+                                <input type="radio" name="rating" id="2-stars" value="2-stars" class="border border-slate-400 bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                <label for="2-stars" class="text-slate-300 text-lg font-semibold hover:text-violet-400 transition duration-150 pl-4 pr-2">2</label>
+                                <div class="flex items-center ">
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+
+                            <!--1 Star-->
+                            <div class="flex items-center pb-2">
+                                <input type="radio" name="rating" id="1-star" value="1-star" class="border border-slate-400 bg-slate-600 text-violet-500 focus:ring-violet-500 h-5 w-5 hover:border-violet-500 hover:bg-slate-700 transition duration-150">
+                                <label for="1-star" class="text-slate-300 text-lg font-semibold hover:text-violet-400 transition duration-150 pl-4 pr-2">1</label>
+                                <div class="flex items-center ">
+                                    <svg class="text-slate-300 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="text-slate-600 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </form>                           
+            </div>  
+
+            <!--button Area-->
+            <div class="bg-slate-700    fixed bottom-0 right-0 float-none z-10 block w-full      lg:w-3/5">
+                <div class="relative bg-slate-900 h-1">
+                    <div class="absolute top-0 bg-violet-500 w-1/3 h-1">
+                    </div>
+                </div>
+                <div class="flex justify-end mx-5      md:mx-20">
+                    <button class="w-full my-5 py-3 px-8 bg-slate-500 rounded-full text-white font-semibolds hover:bg-slate-600 transition duration-150      md:w-32">Next</button>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
